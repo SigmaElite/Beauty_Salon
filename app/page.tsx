@@ -3,14 +3,14 @@
 import type React from "react"
 
 import { useState, useEffect } from "react"
-import { Scissors, Palette, Sparkles, MapPin, Phone, Clock, ChevronDown, Star } from "lucide-react"
+import { Scissors, Palette, Sparkles, MapPin, Phone, Clock, ChevronDown, Star, Hand, Pipette, Brush, Smile } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
-export default function VesnaBeauty() {
+export default function NyashaBeauty() {
   const [isVisible, setIsVisible] = useState(false)
   const [formSubmitted, setFormSubmitted] = useState(false)
 
@@ -59,16 +59,12 @@ export default function VesnaBeauty() {
           }`}
         >
           <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-light text-foreground mb-6 tracking-tight">
-            <span className="block text-balance bg-gradient-to-r from-primary via-accent to-purple-400 bg-clip-text text-transparent animate-shimmer">
-              Весна
-            </span>
-            <span className="block text-balance bg-gradient-to-r from-accent via-primary to-yellow-400 bg-clip-text text-transparent animate-shimmer">
-              Бьюти
+            <span className="block text-balance bg-gradient-to-r from-primary via-accent to-purple-400 bg-clip-text text-transparent animate-shimmer animate-pulse-slow">
+              Няша
             </span>
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
-            Современная парикмахерская в Минске. Мы создаём стильные стрижки, профессиональное окрашивание и укладку
-            волос.
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in">
+            Современный салон красоты в Минске. Мы создаём стильные стрижки, профессиональное окрашивание, маникюр, педикюр и другие услуги для вашей красоты.
           </p>
           <Button
             size="lg"
@@ -89,12 +85,12 @@ export default function VesnaBeauty() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="font-serif text-4xl md:text-5xl font-light text-foreground text-balance">О нас</h2>
-              <p className="text-muted-foreground leading-relaxed text-lg">
-                Весна Бьюти — это место, где профессионализм встречается с творчеством. Наши мастера создают не просто
+              <h2 className="font-serif text-4xl md:text-5xl font-light text-foreground text-balance animate-slide-in-left">О нас</h2>
+              <p className="text-muted-foreground leading-relaxed text-lg animate-fade-in-up">
+                Няша — это место, где профессионализм встречается с творчеством. Наши мастера создают не просто
                 причёски, а настоящие произведения искусства, подчёркивающие вашу индивидуальность.
               </p>
-              <p className="text-muted-foreground leading-relaxed text-lg">
+              <p className="text-muted-foreground leading-relaxed text-lg animate-fade-in-up" style={{animationDelay: '0.2s'}}>
                 Мы используем только качественные материалы и современные техники, чтобы каждый визит к нам был
                 комфортным и результативным. Ваша красота — наша философия.
               </p>
@@ -105,11 +101,11 @@ export default function VesnaBeauty() {
                 <span className="ml-2 text-muted-foreground">5.0 на основе отзывов клиентов</span>
               </div>
             </div>
-            <div className="relative h-96 rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative h-96 rounded-3xl overflow-hidden shadow-2xl animate-slide-in-right">
               <img
                 src="/modern-elegant-hair-salon-interior-with-natural-li.jpg"
                 alt="Интерьер салона"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-cover hover:scale-110 hover:rotate-1 transition-all duration-700"
               />
             </div>
           </div>
@@ -127,7 +123,7 @@ export default function VesnaBeauty() {
                 title: "Стрижка",
                 description:
                   "Современные стрижки для любого стиля и типа волос. Наши мастера создадут идеальный образ специально для вас.",
-                price: "15 BYN",
+                price: "от 15 BYN",
                 gradient: "from-blue-400 to-cyan-300",
                 bgGradient: "from-blue-50 to-cyan-50",
               },
@@ -136,7 +132,7 @@ export default function VesnaBeauty() {
                 title: "Окрашивание волос",
                 description:
                   "Профессиональное окрашивание с использованием премиальных красителей. От классики до смелых экспериментов.",
-                price: "100 BYN",
+                price: "от 100 BYN",
                 gradient: "from-purple-400 to-pink-400",
                 bgGradient: "from-purple-50 to-pink-50",
               },
@@ -145,20 +141,57 @@ export default function VesnaBeauty() {
                 title: "Укладка волос",
                 description:
                   "Элегантные укладки для особых случаев и повседневной жизни. Ваши волосы будут выглядеть безупречно.",
-                price: "10 BYN",
+                price: "от 10 BYN",
                 gradient: "from-yellow-400 to-orange-400",
                 bgGradient: "from-yellow-50 to-orange-50",
+              },
+              {
+                icon: Hand,
+                title: "Маникюр",
+                description:
+                  "Качественный маникюр с покрытием гель-лак. Множество дизайнов и оттенков на выбор для идеального образа.",
+                price: "от 30 BYN",
+                gradient: "from-pink-400 to-rose-400",
+                bgGradient: "from-pink-50 to-rose-50",
+              },
+              {
+                icon: Pipette,
+                title: "Педикюр",
+                description:
+                  "Аппаратный и классический педикюр с покрытием. Профессиональный уход за вашими ногами и стопами.",
+                price: "от 35 BYN",
+                gradient: "from-emerald-400 to-teal-400",
+                bgGradient: "from-emerald-50 to-teal-50",
+              },
+              {
+                icon: Brush,
+                title: "Макияж",
+                description:
+                  "Профессиональный макияж для любого повода: дневной, вечерний, свадебный. Подчеркнём вашу естественную красоту.",
+                price: "от 50 BYN",
+                gradient: "from-amber-400 to-orange-400",
+                bgGradient: "from-amber-50 to-orange-50",
+              },
+              {
+                icon: Smile,
+                title: "Косметология",
+                description:
+                  "Чистка лица, пилинги, массаж лица и другие процедуры для здоровья и красоты вашей кожи.",
+                price: "от 40 BYN",
+                gradient: "from-violet-400 to-fuchsia-400",
+                bgGradient: "from-violet-50 to-fuchsia-50",
               },
             ].map((service, index) => (
               <Card
                 key={index}
-                className="p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-border/50 bg-card overflow-hidden relative group"
+                className="p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:rotate-1 border-border/50 bg-card overflow-hidden relative group animate-scale-in"
+                style={{animationDelay: `${index * 0.1}s`}}
               >
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${service.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
                 />
                 <div className="relative z-10">
-                  <div className={`mb-6 inline-block p-4 rounded-2xl bg-gradient-to-br ${service.gradient}`}>
+                  <div className={`mb-6 inline-block p-4 rounded-2xl bg-gradient-to-br ${service.gradient} group-hover:scale-110 group-hover:rotate-12 transition-all duration-500`}>
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-light mb-4 text-foreground">{service.title}</h3>
@@ -284,9 +317,13 @@ export default function VesnaBeauty() {
                       <SelectValue placeholder="Выберите услугу" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="haircut">Стрижка (15 BYN)</SelectItem>
-                      <SelectItem value="coloring">Окрашивание волос (100 BYN)</SelectItem>
-                      <SelectItem value="styling">Укладка волос (10 BYN)</SelectItem>
+                      <SelectItem value="haircut">Стрижка (от 15 BYN)</SelectItem>
+                      <SelectItem value="coloring">Окрашивание волос (от 100 BYN)</SelectItem>
+                      <SelectItem value="styling">Укладка волос (от 10 BYN)</SelectItem>
+                      <SelectItem value="manicure">Маникюр (от 30 BYN)</SelectItem>
+                      <SelectItem value="pedicure">Педикюр (от 35 BYN)</SelectItem>
+                      <SelectItem value="makeup">Макияж (от 50 BYN)</SelectItem>
+                      <SelectItem value="cosmetology">Косметология (от 40 BYN)</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -317,7 +354,7 @@ export default function VesnaBeauty() {
                 </div>
                 <div>
                   <h3 className="font-medium mb-2 text-foreground">Адрес</h3>
-                  <p className="text-muted-foreground leading-relaxed">г. Минск, ул. Ротмистрова 60</p>
+                  <p className="text-muted-foreground leading-relaxed">г. Минск, ул. Авроровская 4-1Н</p>
                 </div>
               </div>
 
@@ -326,9 +363,9 @@ export default function VesnaBeauty() {
                   <Phone className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-medium mb-2 text-foreground">Телефон</h3>
-                  <a href="tel:+375297774089" className="text-muted-foreground hover:text-primary transition-colors">
-                    +375 29 777-40-89
+                  <h3 className="font-medium mb-2 text-foreground">Телефон для записи</h3>
+                  <a href="tel:+375447199090" className="text-muted-foreground hover:text-primary transition-colors">
+                    +375 44 719-90-90
                   </a>
                 </div>
               </div>
@@ -364,7 +401,7 @@ export default function VesnaBeauty() {
       </section>
 
       <footer className="py-12 px-4 bg-gradient-to-r from-primary/10 via-accent/10 to-purple-100/30 text-center">
-        <p className="text-muted-foreground">© 2025 Весна Бьюти. Все права защищены.</p>
+        <p className="text-muted-foreground">© 2025 Няша. Все права защищены.</p>
       </footer>
     </div>
   )
